@@ -1,6 +1,6 @@
 #include "malloc.h"
 
-
+heap_t heap;
 
 /* ---------------- MALLOC CORE ---------------- */
 
@@ -49,7 +49,7 @@ void *malloc(size_t size)
             heap.large_allocations = new_block;
             new_block->prev = last_block;
             new_block->next = NULL;
-            VALGRIND_MALLOCLIKE_BLOCK(new_block, total, 0, 0);
+            VG_MALLOC((char *)new_block + sizeof(block_t), size);
         }
         else {
             last_block->next = new_block;
@@ -98,9 +98,9 @@ void *malloc(size_t size)
         }
         current->next = new_zone;
         new_zone->blocks->free = 0;
-        new_zone->blocks->size = size;
+        new_zone->blocks->size = block_size;
         void *ret = (char *)new_zone->blocks + sizeof(block_t);
-        VALGRIND_MALLOCLIKE_BLOCK(ret, size, 0, 0);
+        VG_MALLOC(ret, size);
         return ret;
 
         // DBG("no free block found");
@@ -112,11 +112,45 @@ void *malloc(size_t size)
     void *ret = (char *)block + sizeof(block_t);
 
     DBG("allocated ptr=%p", ret);
-
-    VALGRIND_MALLOCLIKE_BLOCK(ret, size, 0, 0);
+    
+    VG_MALLOC(ret, size);
 
     return ret;
 }
 
 
 
+int main(void)
+{
+    int number_char_pointers = 2;
+    char *arr[number_char_pointers];
+
+    for (int i = 0; i < number_char_pointers; i++)
+    {
+        arr[i] = malloc(60);
+
+        if (!arr[i])
+        {
+            // printf("allocation failed at i=%d", i);
+            return 1;
+        }
+
+        arr[i][0] = 't';
+        arr[i][1] = 'e';
+        arr[i][2] = 's';
+        arr[i][3] = 't';
+    }
+
+    void *pointer1 = malloc(2000);
+    void *pointer2 = malloc(2000);
+    void *pointer3 = malloc(2000);
+    void *pointer4 = malloc(2000);
+
+    // show_alloc_mem();
+
+    void * new_pointer1 = realloc(pointer1, 2000);
+
+    // show_alloc_mem();
+
+    return 0;
+}

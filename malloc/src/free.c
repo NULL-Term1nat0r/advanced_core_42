@@ -3,10 +3,10 @@
 void free(void *pointer){
     if(!pointer)
         return;
-    VALGRIND_FREELIKE_BLOCK(pointer, 0);
+    VG_FREE(pointer);
     block_t *struct_pointer = (block_t *)((char *)pointer - sizeof(block_t));
     if (struct_pointer->type == LARGE_ZONE){
-        printf("found large pointer\n");
+        // printf("found large pointer\n");
         //check if first element in list and second element follows
         if(struct_pointer->prev == NULL && struct_pointer->next != NULL){
             heap.large_allocations = struct_pointer->next;
