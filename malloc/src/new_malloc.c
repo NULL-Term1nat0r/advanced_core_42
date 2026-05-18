@@ -199,7 +199,7 @@ void block_detach(block_t **head, block_t *block){
     DBG("block_detach removed %p from list head now %p", block, (void *)*head);
 }
 
-zone_t *block_to_zone(void *block) {
+zone_t *calculate_zone_ptr(void *block) {
     return (zone_t *)(((u_int64_t)block) & ~(ALIGN - 1));
 }
 
@@ -383,7 +383,7 @@ void ft_free(void *ptr){
     }
     if(type == TINY_BLOCK || type == SMALL_BLOCK){
         void *block_ptr = ptr_unpack(ptr);
-        zone_t *zone = block_to_zone(block_ptr);
+        zone_t *zone = calculate_zone_ptr(block_ptr);
         size_t block_number = ptr_get_tag(ptr);
         DBG("ft_free freeing block in zone %p block_number=%zu", zone, block_number);
         zone->bitmap[block_number / 8] |= (1 << (block_number % 8));
@@ -413,6 +413,59 @@ void ft_free(void *ptr){
     }
     DBG("ft_free type=%d", (int)type);
 
+}
+
+void *ft_realloc(void *ptr, size_t size){
+    if(!ptr){
+        DBG("ft_realloc called with NULL pointer, delegating to ft_malloc size=%zu", size);
+        return ft_malloc(size);
+    }
+    DBG("ft_realloc called with ptr=%p size=%zu", ptr, size);
+    u_int64_t tag = ptr_get_tag(ptr);
+    type_t type = ptr_get_type(ptr);
+    if(type == -1){
+        DBG("ft_realloc invalid type for ptr=%p", ptr);
+        return NULL;
+    }
+    if(type == TINY_BLOCK || type == SMALL_BLOCK){
+        void *block_ptr = ptr_unpack(ptr);
+        zone_t *zone = calculate_zone_ptr(block_ptr);
+        size_t block_number = ptr_get_tag(ptr);
+        size_t current_block_size = zone->block_size;
+        if(size <= current_block_size){
+            DBG("ft_realloc requested size %zu fits in current block size %zu, returning same pointer", size, current_block_size);
+            return ptr;
+        }
+    }
+    if(type == LARGE_BLOCK){
+        void *raw_ptr = ptr_unpack(ptr);
+        block_t *block = (block_t *)((char *)raw_ptr - sizeof(block_t));
+        if(size <= block->size){
+            DBG("ft_realloc requested size %zu fits in current large block size %zu, returning same pointer", size, block->size);
+            return ptr;
+        }
+    }
+    // For simplicity, we won't implement in-place resizing. We'll allocate a new block and copy data.
+    void *packed_ptr = ft_malloc(size);
+    if(packed_ptr == NULL){
+        DBG("ft_realloc failed to allocate new block for size=%zu", size);
+        return NULL;
+    }
+    void *unpacked_ptr = ptr_unpack(packed_ptr);
+    void *old_unpacked_ptr = ptr_unpack(ptr);
+
+    for(size_t i = 0; i < size; i++){
+        ((char *)unpacked_ptr)[i] = ((char *)old_unpacked_ptr)[i];
+    }
+    
+    // In a real implementation, we would copy the existing data to the new block here.
+    // lets go this
+
+    DBG("ft_realloc allocated new block %p for size=%zu, old ptr=%p", unpacked_ptr, size, ptr);
+    
+    ft_free(ptr);
+    packed_ptr = ptr_pack(unpacked_ptr, 0, type);
+    return packed_ptr;
 }
 
 
@@ -450,9 +503,19 @@ int main(){
     // ft_free(ptr_2);
 
     char *ptr = ft_malloc(6000);
-    ft_free(ptr);
-    char *ptr_2 = ft_malloc(6000);
+    // ft_free(ptr);
+    char *ptr_2 = ft_realloc(ptr, 6000);
     ft_free(ptr_2);
+    for (int i = 0; i < 400; i++){
+        char *temp_ptr = ft_malloc(900);
+        if(temp_ptr == NULL){
+            DBG("main failed to allocate block for iteration %d", i);
+            continue;
+        }
+        temp_ptr[0] = 'a';
+        temp_ptr[1] = '\0';
+        printf("temp_ptr_%d: %s\n", i, temp_ptr);
+    }
 
     // char *ptr = ft_malloc(64);
     // char *ptr_1 = ft_malloc(64);
