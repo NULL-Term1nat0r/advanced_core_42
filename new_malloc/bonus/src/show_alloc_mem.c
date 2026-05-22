@@ -66,6 +66,7 @@ static void hex_dump(void *addr, size_t size) {
             if (j == 7)
                 write_char(' ');
         }
+        
         write_str(" |");
         for (size_t j = 0; j < 16 && i + j < size; j++) {
             unsigned char c = p[i + j];
@@ -95,7 +96,6 @@ static size_t show_zone(zone_t *zone) {
 }
 
 void show_alloc_mem() {
-    lock_heap();
     size_t total = 0;
 
     zone_t *first_tiny = global_heap.free_tiny_zones
@@ -138,7 +138,6 @@ void show_alloc_mem() {
     write_str("Total : ");
     write_dec(total);
     write_str(" bytes\n");
-    unlock_heap();
 }
 
 static size_t show_zone_ex(zone_t *zone) {
@@ -162,7 +161,6 @@ static size_t show_zone_ex(zone_t *zone) {
 }
 
 void show_alloc_mem_ex(void) {
-    lock_heap();
     size_t total = 0;
 
     zone_t *first_tiny = global_heap.free_tiny_zones
@@ -202,9 +200,9 @@ void show_alloc_mem_ex(void) {
         total += block->size;
         block = block->next;
     }
+    
 
     write_str("Total : ");
     write_dec(total);
     write_str(" bytes\n");
-    unlock_heap();
 }

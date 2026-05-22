@@ -1,5 +1,7 @@
 #include "malloc_bonus.h"
 
+// can we make less functions and still achieve the goal here for mutexes ?  
+
 void lst_add_back(zone_t **head, zone_t *new_lst){
     if (head == NULL || new_lst == NULL) {
         DBG("lst_add_back invalid args head=%p new_lst=%p", (void *)head, (void *)new_lst);

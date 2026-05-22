@@ -10,6 +10,7 @@
 #include <pthread.h>
 #include <valgrind/memcheck.h>
 #include "../libft/libft.h"
+#include "../printf/ft_printf.h"
 
 #define TINY_BLOCK_SIZE 64
 #define SMALL_BLOCK_SIZE 1024
@@ -20,11 +21,7 @@
 #define DEBUG 1
 
 #if DEBUG
-# define DBG(fmt, ...) do { \
-    char _dbg_buf[512]; \
-    int _dbg_n = snprintf(_dbg_buf, sizeof(_dbg_buf), "[DEBUG] " fmt "\n", ##__VA_ARGS__); \
-    write(STDERR_FILENO, _dbg_buf, _dbg_n > 0 ? _dbg_n : 0); \
-} while(0)
+# define DBG(fmt, ...) ft_printf("[DEBUG] " fmt "\n", ##__VA_ARGS__)
 #else
 # define DBG(fmt, ...)
 #endif

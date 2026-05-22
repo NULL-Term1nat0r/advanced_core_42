@@ -10,6 +10,7 @@
 #include <pthread.h>
 #include <valgrind/memcheck.h>
 #include "../../libft/libft.h"
+#include "../../printf/ft_printf.h"
 
 #define TINY_BLOCK_SIZE 64
 #define SMALL_BLOCK_SIZE 1024
@@ -20,11 +21,7 @@
 #define DEBUG 1
 
 #if DEBUG
-# define DBG(fmt, ...) do { \
-    char _dbg_buf[512]; \
-    int _dbg_n = snprintf(_dbg_buf, sizeof(_dbg_buf), "[DEBUG] " fmt "\n", ##__VA_ARGS__); \
-    write(STDERR_FILENO, _dbg_buf, _dbg_n > 0 ? _dbg_n : 0); \
-} while(0)
+# define DBG(fmt, ...) ft_printf("[DEBUG] " fmt "\n", ##__VA_ARGS__)
 #else
 # define DBG(fmt, ...)
 #endif
@@ -57,6 +54,9 @@ typedef struct block{
 } block_t;
 
 typedef struct heap {
+    pthread_mutex_t tiny_lock;
+    pthread_mutex_t small_lock;
+    pthread_mutex_t large_lock;
     int initialized;
     zone_t *free_tiny_zones;
     zone_t *free_small_zones;
@@ -68,16 +68,16 @@ typedef struct heap {
 } heap_t;
 
 extern heap_t global_heap;
-extern pthread_mutex_t g_malloc_mutex;
+extern pthread_mutex_t heap_mutex;
 
-
-void lock_heap(void);
-void unlock_heap(void);
 void *calculate_zone_block_address(zone_t *zone, int block_number);
 void lst_add_back(zone_t **head, zone_t *new_lst);
 void block_add_back(block_t **head, block_t *new_block);
 void lst_detach(zone_t **head, zone_t *lst);
 void block_detach(block_t **head, block_t *block);
+
+void lock_list(type_t type);
+void unlock_list(type_t type);
 
 void *malloc(size_t size);
 void free(void *ptr);
