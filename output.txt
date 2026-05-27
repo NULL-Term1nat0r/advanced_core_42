@@ -1,0 +1,1265 @@
+[DEBUG] malloc size=8192 initialized=0
+[DEBUG] setup_global_heap start
+[DEBUG] creating new zone with block_size=64
+[DEBUG] system page size=4096
+[DEBUG] inserting new TINY zone 0x7f879fb78000 n_blocks=101 total_size=8192
+[DEBUG] lst_add_back creating new head 0x7f879fb78000
+[DEBUG] creating new zone with block_size=1024
+[DEBUG] system page size=4096
+[DEBUG] inserting new SMALL zone 0x7f879fb43000 n_blocks=102 total_size=106496
+[DEBUG] lst_add_back creating new head 0x7f879fb43000
+[DEBUG] setup_global_heap done initialized=1 tiny=0x7f879fb78000 small=0x7f879fb43000
+[DEBUG] malloc returning block for size=8192
+[DEBUG] alloc_block request size=8192
+[DEBUG] alloc_block request large size=8192, delegating to find_free_large_block
+[DEBUG] create_block block_size=8192
+[DEBUG] find_free_large_block created block 0x7f879fb75000 size=8192
+[DEBUG] block_add_back creating new head 0x7f879fb75000
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 0 in byte 0
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=0 free_count=100 bitmap_byte[0]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=0 addr=0x7f879fb78385
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 1 in byte 0
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=1 free_count=99 bitmap_byte[0]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=1 addr=0x7f879fb783cd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 2 in byte 0
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=2 free_count=98 bitmap_byte[0]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=2 addr=0x7f879fb78415
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 3 in byte 0
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=3 free_count=97 bitmap_byte[0]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=3 addr=0x7f879fb7845d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 4 in byte 0
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=4 free_count=96 bitmap_byte[0]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=4 addr=0x7f879fb784a5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 5 in byte 0
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=5 free_count=95 bitmap_byte[0]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=5 addr=0x7f879fb784ed
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 6 in byte 0
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=6 free_count=94 bitmap_byte[0]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=6 addr=0x7f879fb78535
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 7 in byte 0
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=7 free_count=93 bitmap_byte[0]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=7 addr=0x7f879fb7857d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 8 in byte 1
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=8 free_count=92 bitmap_byte[1]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=8 addr=0x7f879fb785c5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 9 in byte 1
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=9 free_count=91 bitmap_byte[1]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=9 addr=0x7f879fb7860d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 10 in byte 1
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=10 free_count=90 bitmap_byte[1]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=10 addr=0x7f879fb78655
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 11 in byte 1
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=11 free_count=89 bitmap_byte[1]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=11 addr=0x7f879fb7869d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 12 in byte 1
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=12 free_count=88 bitmap_byte[1]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=12 addr=0x7f879fb786e5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 13 in byte 1
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=13 free_count=87 bitmap_byte[1]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=13 addr=0x7f879fb7872d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 14 in byte 1
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=14 free_count=86 bitmap_byte[1]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=14 addr=0x7f879fb78775
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 15 in byte 1
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=15 free_count=85 bitmap_byte[1]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=15 addr=0x7f879fb787bd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 16 in byte 2
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=16 free_count=84 bitmap_byte[2]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=16 addr=0x7f879fb78805
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 17 in byte 2
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=17 free_count=83 bitmap_byte[2]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=17 addr=0x7f879fb7884d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 18 in byte 2
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=18 free_count=82 bitmap_byte[2]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=18 addr=0x7f879fb78895
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 19 in byte 2
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=19 free_count=81 bitmap_byte[2]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=19 addr=0x7f879fb788dd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 20 in byte 2
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=20 free_count=80 bitmap_byte[2]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=20 addr=0x7f879fb78925
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 21 in byte 2
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=21 free_count=79 bitmap_byte[2]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=21 addr=0x7f879fb7896d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 22 in byte 2
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=22 free_count=78 bitmap_byte[2]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=22 addr=0x7f879fb789b5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 23 in byte 2
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=23 free_count=77 bitmap_byte[2]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=23 addr=0x7f879fb789fd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 24 in byte 3
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=24 free_count=76 bitmap_byte[3]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=24 addr=0x7f879fb78a45
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 25 in byte 3
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=25 free_count=75 bitmap_byte[3]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=25 addr=0x7f879fb78a8d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 26 in byte 3
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=26 free_count=74 bitmap_byte[3]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=26 addr=0x7f879fb78ad5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 27 in byte 3
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=27 free_count=73 bitmap_byte[3]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=27 addr=0x7f879fb78b1d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 28 in byte 3
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=28 free_count=72 bitmap_byte[3]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=28 addr=0x7f879fb78b65
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 29 in byte 3
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=29 free_count=71 bitmap_byte[3]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=29 addr=0x7f879fb78bad
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 30 in byte 3
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=30 free_count=70 bitmap_byte[3]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=30 addr=0x7f879fb78bf5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 31 in byte 3
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=31 free_count=69 bitmap_byte[3]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=31 addr=0x7f879fb78c3d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 32 in byte 4
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=32 free_count=68 bitmap_byte[4]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=32 addr=0x7f879fb78c85
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 33 in byte 4
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=33 free_count=67 bitmap_byte[4]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=33 addr=0x7f879fb78ccd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 34 in byte 4
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=34 free_count=66 bitmap_byte[4]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=34 addr=0x7f879fb78d15
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 35 in byte 4
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=35 free_count=65 bitmap_byte[4]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=35 addr=0x7f879fb78d5d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 36 in byte 4
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=36 free_count=64 bitmap_byte[4]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=36 addr=0x7f879fb78da5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 37 in byte 4
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=37 free_count=63 bitmap_byte[4]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=37 addr=0x7f879fb78ded
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 38 in byte 4
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=38 free_count=62 bitmap_byte[4]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=38 addr=0x7f879fb78e35
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 39 in byte 4
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=39 free_count=61 bitmap_byte[4]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=39 addr=0x7f879fb78e7d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 40 in byte 5
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=40 free_count=60 bitmap_byte[5]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=40 addr=0x7f879fb78ec5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 41 in byte 5
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=41 free_count=59 bitmap_byte[5]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=41 addr=0x7f879fb78f0d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 42 in byte 5
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=42 free_count=58 bitmap_byte[5]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=42 addr=0x7f879fb78f55
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 43 in byte 5
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=43 free_count=57 bitmap_byte[5]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=43 addr=0x7f879fb78f9d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 44 in byte 5
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=44 free_count=56 bitmap_byte[5]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=44 addr=0x7f879fb78fe5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 45 in byte 5
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=45 free_count=55 bitmap_byte[5]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=45 addr=0x7f879fb7902d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 46 in byte 5
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=46 free_count=54 bitmap_byte[5]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=46 addr=0x7f879fb79075
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 47 in byte 5
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=47 free_count=53 bitmap_byte[5]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=47 addr=0x7f879fb790bd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 48 in byte 6
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=48 free_count=52 bitmap_byte[6]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=48 addr=0x7f879fb79105
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 49 in byte 6
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=49 free_count=51 bitmap_byte[6]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=49 addr=0x7f879fb7914d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 50 in byte 6
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=50 free_count=50 bitmap_byte[6]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=50 addr=0x7f879fb79195
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 51 in byte 6
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=51 free_count=49 bitmap_byte[6]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=51 addr=0x7f879fb791dd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 52 in byte 6
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=52 free_count=48 bitmap_byte[6]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=52 addr=0x7f879fb79225
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 53 in byte 6
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=53 free_count=47 bitmap_byte[6]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=53 addr=0x7f879fb7926d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 54 in byte 6
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=54 free_count=46 bitmap_byte[6]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=54 addr=0x7f879fb792b5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 55 in byte 6
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=55 free_count=45 bitmap_byte[6]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=55 addr=0x7f879fb792fd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 56 in byte 7
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=56 free_count=44 bitmap_byte[7]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=56 addr=0x7f879fb79345
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 57 in byte 7
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=57 free_count=43 bitmap_byte[7]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=57 addr=0x7f879fb7938d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 58 in byte 7
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=58 free_count=42 bitmap_byte[7]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=58 addr=0x7f879fb793d5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 59 in byte 7
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=59 free_count=41 bitmap_byte[7]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=59 addr=0x7f879fb7941d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 60 in byte 7
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=60 free_count=40 bitmap_byte[7]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=60 addr=0x7f879fb79465
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 61 in byte 7
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=61 free_count=39 bitmap_byte[7]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=61 addr=0x7f879fb794ad
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 62 in byte 7
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=62 free_count=38 bitmap_byte[7]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=62 addr=0x7f879fb794f5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 63 in byte 7
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=63 free_count=37 bitmap_byte[7]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=63 addr=0x7f879fb7953d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 64 in byte 8
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=64 free_count=36 bitmap_byte[8]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=64 addr=0x7f879fb79585
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 65 in byte 8
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=65 free_count=35 bitmap_byte[8]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=65 addr=0x7f879fb795cd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 66 in byte 8
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=66 free_count=34 bitmap_byte[8]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=66 addr=0x7f879fb79615
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 67 in byte 8
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=67 free_count=33 bitmap_byte[8]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=67 addr=0x7f879fb7965d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 68 in byte 8
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=68 free_count=32 bitmap_byte[8]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=68 addr=0x7f879fb796a5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 69 in byte 8
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=69 free_count=31 bitmap_byte[8]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=69 addr=0x7f879fb796ed
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 70 in byte 8
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=70 free_count=30 bitmap_byte[8]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=70 addr=0x7f879fb79735
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 71 in byte 8
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=71 free_count=29 bitmap_byte[8]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=71 addr=0x7f879fb7977d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 72 in byte 9
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=72 free_count=28 bitmap_byte[9]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=72 addr=0x7f879fb797c5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 73 in byte 9
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=73 free_count=27 bitmap_byte[9]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=73 addr=0x7f879fb7980d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 74 in byte 9
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=74 free_count=26 bitmap_byte[9]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=74 addr=0x7f879fb79855
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 75 in byte 9
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=75 free_count=25 bitmap_byte[9]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=75 addr=0x7f879fb7989d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 76 in byte 9
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=76 free_count=24 bitmap_byte[9]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=76 addr=0x7f879fb798e5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 77 in byte 9
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=77 free_count=23 bitmap_byte[9]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=77 addr=0x7f879fb7992d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 78 in byte 9
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=78 free_count=22 bitmap_byte[9]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=78 addr=0x7f879fb79975
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 79 in byte 9
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=79 free_count=21 bitmap_byte[9]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=79 addr=0x7f879fb799bd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 80 in byte 10
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=80 free_count=20 bitmap_byte[10]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=80 addr=0x7f879fb79a05
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 81 in byte 10
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=81 free_count=19 bitmap_byte[10]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=81 addr=0x7f879fb79a4d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 82 in byte 10
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=82 free_count=18 bitmap_byte[10]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=82 addr=0x7f879fb79a95
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 83 in byte 10
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=83 free_count=17 bitmap_byte[10]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=83 addr=0x7f879fb79add
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 84 in byte 10
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=84 free_count=16 bitmap_byte[10]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=84 addr=0x7f879fb79b25
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 85 in byte 10
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=85 free_count=15 bitmap_byte[10]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=85 addr=0x7f879fb79b6d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 86 in byte 10
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=86 free_count=14 bitmap_byte[10]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=86 addr=0x7f879fb79bb5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 87 in byte 10
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=87 free_count=13 bitmap_byte[10]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=87 addr=0x7f879fb79bfd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 88 in byte 11
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=88 free_count=12 bitmap_byte[11]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=88 addr=0x7f879fb79c45
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 89 in byte 11
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=89 free_count=11 bitmap_byte[11]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=89 addr=0x7f879fb79c8d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 90 in byte 11
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=90 free_count=10 bitmap_byte[11]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=90 addr=0x7f879fb79cd5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 91 in byte 11
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=91 free_count=9 bitmap_byte[11]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=91 addr=0x7f879fb79d1d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 92 in byte 11
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=92 free_count=8 bitmap_byte[11]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=92 addr=0x7f879fb79d65
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 93 in byte 11
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=93 free_count=7 bitmap_byte[11]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=93 addr=0x7f879fb79dad
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 94 in byte 11
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=94 free_count=6 bitmap_byte[11]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=94 addr=0x7f879fb79df5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 95 in byte 11
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=95 free_count=5 bitmap_byte[11]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=95 addr=0x7f879fb79e3d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 96 in byte 12
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=96 free_count=4 bitmap_byte[12]=0x1e
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=96 addr=0x7f879fb79e85
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 97 in byte 12
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=97 free_count=3 bitmap_byte[12]=0x1c
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=97 addr=0x7f879fb79ecd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 98 in byte 12
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=98 free_count=2 bitmap_byte[12]=0x18
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=98 addr=0x7f879fb79f15
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 99 in byte 12
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=99 free_count=1 bitmap_byte[12]=0x10
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=99 addr=0x7f879fb79f5d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 100 in byte 12
+[DEBUG] find_free_block zone=0x7f879fb78000 set_bit=100 free_count=0 bitmap_byte[12]=0x00
+[DEBUG] find_free_block moving zone 0x7f879fb78000 to full list
+[DEBUG] lst_detach removed 0x7f879fb78000 from list head now 0x0
+[DEBUG] lst_add_back creating new head 0x7f879fb78000
+[DEBUG] creating new zone with block_size=64
+[DEBUG] system page size=4096
+[DEBUG] inserting new TINY zone 0x7f879fb73000 n_blocks=101 total_size=8192
+[DEBUG] lst_add_back creating new head 0x7f879fb73000
+[DEBUG] calculate_memory_address zone=0x7f879fb78000 block_number=100 addr=0x7f879fb79fa5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 0 in byte 0
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=0 free_count=100 bitmap_byte[0]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=0 addr=0x7f879fb73385
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 1 in byte 0
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=1 free_count=99 bitmap_byte[0]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=1 addr=0x7f879fb733cd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 2 in byte 0
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=2 free_count=98 bitmap_byte[0]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=2 addr=0x7f879fb73415
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 3 in byte 0
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=3 free_count=97 bitmap_byte[0]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=3 addr=0x7f879fb7345d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 4 in byte 0
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=4 free_count=96 bitmap_byte[0]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=4 addr=0x7f879fb734a5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 5 in byte 0
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=5 free_count=95 bitmap_byte[0]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=5 addr=0x7f879fb734ed
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 6 in byte 0
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=6 free_count=94 bitmap_byte[0]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=6 addr=0x7f879fb73535
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 7 in byte 0
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=7 free_count=93 bitmap_byte[0]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=7 addr=0x7f879fb7357d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 8 in byte 1
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=8 free_count=92 bitmap_byte[1]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=8 addr=0x7f879fb735c5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 9 in byte 1
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=9 free_count=91 bitmap_byte[1]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=9 addr=0x7f879fb7360d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 10 in byte 1
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=10 free_count=90 bitmap_byte[1]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=10 addr=0x7f879fb73655
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 11 in byte 1
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=11 free_count=89 bitmap_byte[1]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=11 addr=0x7f879fb7369d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 12 in byte 1
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=12 free_count=88 bitmap_byte[1]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=12 addr=0x7f879fb736e5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 13 in byte 1
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=13 free_count=87 bitmap_byte[1]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=13 addr=0x7f879fb7372d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 14 in byte 1
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=14 free_count=86 bitmap_byte[1]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=14 addr=0x7f879fb73775
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 15 in byte 1
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=15 free_count=85 bitmap_byte[1]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=15 addr=0x7f879fb737bd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 16 in byte 2
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=16 free_count=84 bitmap_byte[2]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=16 addr=0x7f879fb73805
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 17 in byte 2
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=17 free_count=83 bitmap_byte[2]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=17 addr=0x7f879fb7384d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 18 in byte 2
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=18 free_count=82 bitmap_byte[2]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=18 addr=0x7f879fb73895
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 19 in byte 2
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=19 free_count=81 bitmap_byte[2]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=19 addr=0x7f879fb738dd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 20 in byte 2
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=20 free_count=80 bitmap_byte[2]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=20 addr=0x7f879fb73925
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 21 in byte 2
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=21 free_count=79 bitmap_byte[2]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=21 addr=0x7f879fb7396d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 22 in byte 2
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=22 free_count=78 bitmap_byte[2]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=22 addr=0x7f879fb739b5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 23 in byte 2
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=23 free_count=77 bitmap_byte[2]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=23 addr=0x7f879fb739fd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 24 in byte 3
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=24 free_count=76 bitmap_byte[3]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=24 addr=0x7f879fb73a45
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 25 in byte 3
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=25 free_count=75 bitmap_byte[3]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=25 addr=0x7f879fb73a8d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 26 in byte 3
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=26 free_count=74 bitmap_byte[3]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=26 addr=0x7f879fb73ad5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 27 in byte 3
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=27 free_count=73 bitmap_byte[3]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=27 addr=0x7f879fb73b1d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 28 in byte 3
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=28 free_count=72 bitmap_byte[3]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=28 addr=0x7f879fb73b65
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 29 in byte 3
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=29 free_count=71 bitmap_byte[3]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=29 addr=0x7f879fb73bad
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 30 in byte 3
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=30 free_count=70 bitmap_byte[3]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=30 addr=0x7f879fb73bf5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 31 in byte 3
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=31 free_count=69 bitmap_byte[3]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=31 addr=0x7f879fb73c3d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 32 in byte 4
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=32 free_count=68 bitmap_byte[4]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=32 addr=0x7f879fb73c85
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 33 in byte 4
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=33 free_count=67 bitmap_byte[4]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=33 addr=0x7f879fb73ccd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 34 in byte 4
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=34 free_count=66 bitmap_byte[4]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=34 addr=0x7f879fb73d15
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 35 in byte 4
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=35 free_count=65 bitmap_byte[4]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=35 addr=0x7f879fb73d5d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 36 in byte 4
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=36 free_count=64 bitmap_byte[4]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=36 addr=0x7f879fb73da5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 37 in byte 4
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=37 free_count=63 bitmap_byte[4]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=37 addr=0x7f879fb73ded
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 38 in byte 4
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=38 free_count=62 bitmap_byte[4]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=38 addr=0x7f879fb73e35
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 39 in byte 4
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=39 free_count=61 bitmap_byte[4]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=39 addr=0x7f879fb73e7d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 40 in byte 5
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=40 free_count=60 bitmap_byte[5]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=40 addr=0x7f879fb73ec5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 41 in byte 5
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=41 free_count=59 bitmap_byte[5]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=41 addr=0x7f879fb73f0d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 42 in byte 5
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=42 free_count=58 bitmap_byte[5]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=42 addr=0x7f879fb73f55
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 43 in byte 5
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=43 free_count=57 bitmap_byte[5]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=43 addr=0x7f879fb73f9d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 44 in byte 5
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=44 free_count=56 bitmap_byte[5]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=44 addr=0x7f879fb73fe5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 45 in byte 5
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=45 free_count=55 bitmap_byte[5]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=45 addr=0x7f879fb7402d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 46 in byte 5
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=46 free_count=54 bitmap_byte[5]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=46 addr=0x7f879fb74075
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 47 in byte 5
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=47 free_count=53 bitmap_byte[5]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=47 addr=0x7f879fb740bd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 48 in byte 6
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=48 free_count=52 bitmap_byte[6]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=48 addr=0x7f879fb74105
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 49 in byte 6
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=49 free_count=51 bitmap_byte[6]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=49 addr=0x7f879fb7414d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 50 in byte 6
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=50 free_count=50 bitmap_byte[6]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=50 addr=0x7f879fb74195
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 51 in byte 6
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=51 free_count=49 bitmap_byte[6]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=51 addr=0x7f879fb741dd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 52 in byte 6
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=52 free_count=48 bitmap_byte[6]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=52 addr=0x7f879fb74225
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 53 in byte 6
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=53 free_count=47 bitmap_byte[6]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=53 addr=0x7f879fb7426d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 54 in byte 6
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=54 free_count=46 bitmap_byte[6]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=54 addr=0x7f879fb742b5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 55 in byte 6
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=55 free_count=45 bitmap_byte[6]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=55 addr=0x7f879fb742fd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 56 in byte 7
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=56 free_count=44 bitmap_byte[7]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=56 addr=0x7f879fb74345
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 57 in byte 7
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=57 free_count=43 bitmap_byte[7]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=57 addr=0x7f879fb7438d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 58 in byte 7
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=58 free_count=42 bitmap_byte[7]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=58 addr=0x7f879fb743d5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 59 in byte 7
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=59 free_count=41 bitmap_byte[7]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=59 addr=0x7f879fb7441d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 60 in byte 7
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=60 free_count=40 bitmap_byte[7]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=60 addr=0x7f879fb74465
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 61 in byte 7
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=61 free_count=39 bitmap_byte[7]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=61 addr=0x7f879fb744ad
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 62 in byte 7
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=62 free_count=38 bitmap_byte[7]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=62 addr=0x7f879fb744f5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 63 in byte 7
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=63 free_count=37 bitmap_byte[7]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=63 addr=0x7f879fb7453d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 64 in byte 8
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=64 free_count=36 bitmap_byte[8]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=64 addr=0x7f879fb74585
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 65 in byte 8
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=65 free_count=35 bitmap_byte[8]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=65 addr=0x7f879fb745cd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 66 in byte 8
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=66 free_count=34 bitmap_byte[8]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=66 addr=0x7f879fb74615
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 67 in byte 8
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=67 free_count=33 bitmap_byte[8]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=67 addr=0x7f879fb7465d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 68 in byte 8
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=68 free_count=32 bitmap_byte[8]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=68 addr=0x7f879fb746a5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 69 in byte 8
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=69 free_count=31 bitmap_byte[8]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=69 addr=0x7f879fb746ed
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 70 in byte 8
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=70 free_count=30 bitmap_byte[8]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=70 addr=0x7f879fb74735
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 71 in byte 8
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=71 free_count=29 bitmap_byte[8]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=71 addr=0x7f879fb7477d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 72 in byte 9
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=72 free_count=28 bitmap_byte[9]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=72 addr=0x7f879fb747c5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 73 in byte 9
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=73 free_count=27 bitmap_byte[9]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=73 addr=0x7f879fb7480d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 74 in byte 9
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=74 free_count=26 bitmap_byte[9]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=74 addr=0x7f879fb74855
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 75 in byte 9
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=75 free_count=25 bitmap_byte[9]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=75 addr=0x7f879fb7489d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 76 in byte 9
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=76 free_count=24 bitmap_byte[9]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=76 addr=0x7f879fb748e5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 77 in byte 9
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=77 free_count=23 bitmap_byte[9]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=77 addr=0x7f879fb7492d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 78 in byte 9
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=78 free_count=22 bitmap_byte[9]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=78 addr=0x7f879fb74975
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 79 in byte 9
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=79 free_count=21 bitmap_byte[9]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=79 addr=0x7f879fb749bd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 80 in byte 10
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=80 free_count=20 bitmap_byte[10]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=80 addr=0x7f879fb74a05
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 81 in byte 10
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=81 free_count=19 bitmap_byte[10]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=81 addr=0x7f879fb74a4d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 82 in byte 10
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=82 free_count=18 bitmap_byte[10]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=82 addr=0x7f879fb74a95
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 83 in byte 10
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=83 free_count=17 bitmap_byte[10]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=83 addr=0x7f879fb74add
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 84 in byte 10
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=84 free_count=16 bitmap_byte[10]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=84 addr=0x7f879fb74b25
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 85 in byte 10
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=85 free_count=15 bitmap_byte[10]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=85 addr=0x7f879fb74b6d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 86 in byte 10
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=86 free_count=14 bitmap_byte[10]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=86 addr=0x7f879fb74bb5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 87 in byte 10
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=87 free_count=13 bitmap_byte[10]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=87 addr=0x7f879fb74bfd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 88 in byte 11
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=88 free_count=12 bitmap_byte[11]=0xfe
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=88 addr=0x7f879fb74c45
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 89 in byte 11
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=89 free_count=11 bitmap_byte[11]=0xfc
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=89 addr=0x7f879fb74c8d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 90 in byte 11
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=90 free_count=10 bitmap_byte[11]=0xf8
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=90 addr=0x7f879fb74cd5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 91 in byte 11
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=91 free_count=9 bitmap_byte[11]=0xf0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=91 addr=0x7f879fb74d1d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 92 in byte 11
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=92 free_count=8 bitmap_byte[11]=0xe0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=92 addr=0x7f879fb74d65
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 93 in byte 11
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=93 free_count=7 bitmap_byte[11]=0xc0
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=93 addr=0x7f879fb74dad
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 94 in byte 11
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=94 free_count=6 bitmap_byte[11]=0x80
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=94 addr=0x7f879fb74df5
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 95 in byte 11
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=95 free_count=5 bitmap_byte[11]=0x00
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=95 addr=0x7f879fb74e3d
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 96 in byte 12
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=96 free_count=4 bitmap_byte[12]=0x1e
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=96 addr=0x7f879fb74e85
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 97 in byte 12
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=97 free_count=3 bitmap_byte[12]=0x1c
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=97 addr=0x7f879fb74ecd
+[DEBUG] malloc size=60 initialized=1
+[DEBUG] malloc returning block for size=60
+[DEBUG] alloc_block request size=60
+[DEBUG] find_set_bit found bit 98 in byte 12
+[DEBUG] find_free_block zone=0x7f879fb73000 set_bit=98 free_count=2 bitmap_byte[12]=0x18
+[DEBUG] calculate_memory_address zone=0x7f879fb73000 block_number=98 addr=0x7f879fb74f15
+[DEBUG] malloc size=4000 initialized=1
+[DEBUG] malloc returning block for size=4000
+[DEBUG] alloc_block request size=4000
+[DEBUG] alloc_block request large size=4000, delegating to find_free_large_block
+[DEBUG] create_block block_size=4000
+[DEBUG] find_free_large_block created block 0x7f879fbb9000 size=4000
+[DEBUG] block_add_back appending 0x7f879fbb9000 after 0x7f879fb75000
+[DEBUG] free called with ptr=0x7f879fbb9030
+[DEBUG] block_detach removed 0x7f879fbb9000 from list head now 0x7f879fb75000
+[DEBUG] block_add_back creating new head 0x7f879fbb9000
+[DEBUG] malloc size=4000 initialized=1
+[DEBUG] malloc returning block for size=4000
+[DEBUG] alloc_block request size=4000
+[DEBUG] alloc_block request large size=4000, delegating to find_free_large_block
+[DEBUG] find_free_large_block reusing free block 0x7f879fbb9000 size=4000 for request=4000
+[DEBUG] block_detach removed 0x7f879fbb9000 from list head now 0x0
+[DEBUG] block_add_back appending 0x7f879fbb9000 after 0x7f879fb75000
+[DEBUG] realloc called with ptr=0x7f879fbb9030 size=4001
+[DEBUG] malloc size=4001 initialized=1
+[DEBUG] malloc returning block for size=4001
+[DEBUG] alloc_block request size=4001
+[DEBUG] alloc_block request large size=4001, delegating to find_free_large_block
+[DEBUG] create_block block_size=4001
+[DEBUG] find_free_large_block created block 0x7f879fb72000 size=4001
+[DEBUG] block_add_back appending 0x7f879fb72000 after 0x7f879fbb9000
+[DEBUG] realloc new block 0x7f879fb72030 for size=4001, old ptr=0x7f879fbb9030
+[DEBUG] free called with ptr=0x7f879fbb9030
+[DEBUG] block_detach removed 0x7f879fbb9000 from list head now 0x7f879fb75000
+[DEBUG] block_add_back creating new head 0x7f879fbb9000
+[DEBUG] free called with ptr=0x7f879fb72030
+[DEBUG] block_detach removed 0x7f879fb72000 from list head now 0x7f879fb75000
+[DEBUG] block_add_back appending 0x7f879fb72000 after 0x7f879fbb9000
+[DEBUG] malloc size=4001 initialized=1
+[DEBUG] malloc returning block for size=4001
+[DEBUG] alloc_block request size=4001
+[DEBUG] alloc_block request large size=4001, delegating to find_free_large_block
+[DEBUG] find_free_large_block reusing free block 0x7f879fb72000 size=4001 for request=4001
+[DEBUG] block_detach removed 0x7f879fb72000 from list head now 0x7f879fbb9000
+[DEBUG] block_add_back appending 0x7f879fb72000 after 0x7f879fb75000
+Starting test
+new_pointer1=test

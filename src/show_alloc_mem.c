@@ -44,7 +44,7 @@ static void write_dec(size_t val) {
 
 static size_t show_zone(zone_t *zone) {
     size_t total = 0;
-    for (int i = 0; i < BLOCKS_PER_ZONE; i++) {
+    for (int i = 0; i < zone->number_of_blocks; i++) {
         if (!(zone->bitmap[i / 8] & (1 << (i % 8)))) {
             size_t req = zone->requested_sizes[i];
             void *start = calculate_zone_block_address(zone, i);

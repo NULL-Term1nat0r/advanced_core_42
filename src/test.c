@@ -25,7 +25,7 @@ int main(void)
 
     for (int i = 0; i < number_char_pointers; i++)
     {
-        printf("arr[%d]=%s\n", i, arr[i]);
+        // printf("arr[%d]=%s\n", i, arr[i]);
         // free(arr[i]);
     }
 
@@ -53,7 +53,7 @@ int main(void)
     free(new_pointer3);
     char *new_pointer4 = malloc(4001);
 
-    show_alloc_mem();
+    // show_alloc_mem();
 
     return 0;
 }

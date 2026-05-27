@@ -16,8 +16,6 @@
 #define SMALL_BLOCK_SIZE 1024
 #define BLOCKS_PER_ZONE 100
 
-#define NUM_BYTES ((100 + 7) / 8)
-
 #define DEBUG 1
 
 #if DEBUG
@@ -35,14 +33,26 @@ typedef enum {
 typedef struct zone {
     void *base;
     type_t type;
-    size_t block_size;
-    size_t requested_sizes[BLOCKS_PER_ZONE];
-    unsigned char bitmap[NUM_BYTES];
+    int number_of_blocks;
+    size_t zone_size;
+    size_t *requested_sizes;
+    unsigned char *bitmap;
     void *memory;
     int free_count;
     struct zone *next;
     struct zone *prev;
 } zone_t;
+
+#define ZONE_BLOCK_SIZE(z)   ((z)->type == TINY_BLOCK ? TINY_BLOCK_SIZE : SMALL_BLOCK_SIZE)
+
+/* Pack zone pointer + block index into one word.
+ * Zones are page-aligned so bits 11:0 are always 0.
+ * bit 11     : is_zone flag (1 = zone block, 0 = raw large-block pointer)
+ * bits 10:0  : block_number (0-2047)                                       */
+#define META_PACK(zone, n)   ((void *)((uintptr_t)(zone) | (1u << 11) | (unsigned)(n)))
+#define META_IS_ZONE(meta)   ((uintptr_t)(meta) & (1u << 11))
+#define META_ZONE(meta)      ((zone_t *)((uintptr_t)(meta) & ~(uintptr_t)0xFFF))
+#define META_BLOCK_NUM(meta) ((int)((uintptr_t)(meta) & 0x7FF))
 
 typedef struct block{
     size_t size;

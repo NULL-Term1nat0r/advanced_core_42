@@ -14,35 +14,60 @@ void print_pointer_in_binary(void *ptr){
 int create_zone(size_t block_size) {
     DBG("creating new zone with block_size=%zu", block_size);
 
-    void *base = mmap(NULL, sizeof(zone_t) + (block_size + sizeof(void *)) * BLOCKS_PER_ZONE, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
+    size_t page_size = (size_t)getpagesize();
+    DBG("system page size=%zu", page_size);
+
+    // Round up to full pages, guaranteeing at least BLOCKS_PER_ZONE blocks fit
+    size_t min_size = sizeof(zone_t)
+        + (BLOCKS_PER_ZONE + 7) / 8
+        + BLOCKS_PER_ZONE * (sizeof(size_t) + sizeof(void *) + block_size);
+    size_t total_size = ((min_size + page_size - 1) / page_size) * page_size;
+
+    // Solve: sizeof(zone_t) + n*(sizeof(void*)+block_size+sizeof(size_t)) + ceil(n/8) <= total_size
+    // => n * (8*per_block + 1) <= 8*(total_size - sizeof(zone_t))
+    size_t per_block = sizeof(void *) + block_size + sizeof(size_t);
+    int n_blocks = (int)(8 * (total_size - sizeof(zone_t))) / (int)(8 * per_block + 1);
+    if (n_blocks > 2047)
+        n_blocks = 2047;
+
+    void *base = mmap(NULL, total_size, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
     if (base == MAP_FAILED)
         return 1;
 
     zone_t *zone = (zone_t *)base;
-
     zone->base = base;
-    if(block_size == TINY_BLOCK_SIZE)
-        zone->type = TINY_BLOCK;
-    if(block_size == SMALL_BLOCK_SIZE)
-        zone->type = SMALL_BLOCK;
-    zone->block_size = block_size;
-    ft_memset(zone->bitmap, 0xFF, sizeof(zone->bitmap));
-    zone->free_count = BLOCKS_PER_ZONE;
+    zone->zone_size = total_size;
+    zone->number_of_blocks = n_blocks;
+    zone->free_count = n_blocks;
     zone->next = NULL;
     zone->prev = NULL;
+    zone->type = (block_size == TINY_BLOCK_SIZE) ? TINY_BLOCK : SMALL_BLOCK;
 
-    for(int i = 0; i < BLOCKS_PER_ZONE; i++){
-        size_t offset = sizeof(zone_t) + i * (sizeof(void *) + zone->block_size);
-        void **meta = (void **)((char *)zone + offset);
-        *meta = (void *)zone;
+    // bitmap sits immediately after the zone_t header
+    zone->bitmap = (unsigned char *)((char *)base + sizeof(zone_t));
+    size_t bitmap_bytes = (n_blocks + 7) / 8;
+
+    // requested_sizes sits immediately after bitmap
+    zone->requested_sizes = (size_t *)(zone->bitmap + bitmap_bytes);
+
+    // All blocks free: set bitmap to all 1s, then mask off unused trailing bits
+    ft_memset(zone->bitmap, 0xFF, bitmap_bytes);
+    if (n_blocks % 8 != 0)
+        zone->bitmap[bitmap_bytes - 1] = (unsigned char)((1 << (n_blocks % 8)) - 1);
+
+    // Block data (meta pointer + payload) starts after bitmap + requested_sizes
+    size_t data_offset = sizeof(zone_t) + bitmap_bytes + n_blocks * sizeof(size_t);
+    for (int i = 0; i < n_blocks; i++) {
+        void **meta = (void **)((char *)base + data_offset + i * (sizeof(void *) + block_size));
+        *meta = META_PACK(zone, i);
     }
-    zone->memory = (void *)((char *)zone + sizeof(zone_t) + sizeof(void *));
+    zone->memory = (void *)((char *)base + data_offset + sizeof(void *));
 
     if (block_size == TINY_BLOCK_SIZE) {
-        DBG("inserting new TINY zone %p", zone);
+        DBG("inserting new TINY zone %p n_blocks=%d total_size=%zu", zone, n_blocks, total_size);
         lst_add_back(&global_heap.free_tiny_zones, zone);
     } else if (block_size == SMALL_BLOCK_SIZE) {
-        DBG("inserting new SMALL zone %p", zone);
+        DBG("inserting new SMALL zone %p n_blocks=%d total_size=%zu", zone, n_blocks, total_size);
         lst_add_back(&global_heap.free_small_zones, zone);
     }
     return 0;
@@ -82,7 +107,8 @@ int find_set_bit(zone_t *zone) {
         DBG("find_set_bit called with NULL zone");
         return -1;
     }
-    for (int i = 0; i < NUM_BYTES; i++) {
+    int num_bytes = (zone->number_of_blocks + 7) / 8;
+    for (int i = 0; i < num_bytes; i++) {
         unsigned char byte = zone->bitmap[i];
         for (int j = 0; j < 8; j++) {
             if (byte & (1 << j)) {
@@ -97,10 +123,8 @@ int find_set_bit(zone_t *zone) {
 }
 
 void *calculate_zone_block_address(zone_t *zone, int block_number){
-    size_t offset = sizeof(zone_t) + block_number * (sizeof(void *) + zone->block_size) + sizeof(void *);
-    void *ptr = (void *)((char *)zone + offset);
-    DBG("calculate_memory_address zone=%p block_number=%d offset=%zu addr=%p",
-        zone, block_number, offset, ptr);
+    void *ptr = (void *)((char *)zone->memory + block_number * (sizeof(void *) + ZONE_BLOCK_SIZE(zone)));
+    DBG("calculate_memory_address zone=%p block_number=%d addr=%p", zone, block_number, ptr);
     return ptr;
 }
 
@@ -117,18 +141,18 @@ void *find_free_block(zone_t *zone, size_t size){
     zone->bitmap[set_bit / 8] &= ~(1 << (set_bit % 8));
     zone->requested_sizes[set_bit] = size;
     zone->free_count--;
-    DBG("find_free_block zone=%p block_size=%zu set_bit=%d free_count=%d bitmap_byte[%d]=0x%02x",
-        zone, zone->block_size, set_bit, zone->free_count,
+    DBG("find_free_block zone=%p set_bit=%d free_count=%d bitmap_byte[%d]=0x%02x",
+        zone, set_bit, zone->free_count,
         set_bit / 8, zone->bitmap[set_bit / 8]);
     if(zone->free_count == 0){
         DBG("find_free_block moving zone %p to full list", zone);
-        if(zone->block_size == TINY_BLOCK_SIZE){
+        if(zone->type == TINY_BLOCK){
             lst_detach(&global_heap.free_tiny_zones, zone);
             lst_add_back(&global_heap.full_tiny_zones, zone);
             if (create_zone(TINY_BLOCK_SIZE) != 0)
                 return NULL;
         }
-        else if(zone->block_size == SMALL_BLOCK_SIZE){
+        else if(zone->type == SMALL_BLOCK){
             lst_detach(&global_heap.free_small_zones, zone);
             lst_add_back(&global_heap.full_small_zones, zone);
             if (create_zone(SMALL_BLOCK_SIZE) != 0)
@@ -206,46 +230,40 @@ void free(void *ptr){
     }
     
     DBG("free called with ptr=%p", ptr);
-    void *meta_ptr = *((void **)((char *)ptr - sizeof(void *)));
-    type_t type = ((block_t *)meta_ptr)->type;
-    if(type == TINY_BLOCK || type == SMALL_BLOCK){
-        zone_t *zone = (zone_t *)meta_ptr;
-        size_t block_number = ((uintptr_t)ptr - sizeof(void *) - (uintptr_t)zone - sizeof(zone_t)) / (sizeof(void *) + zone->block_size);
-        DBG("free freeing block in zone %p block_number=%zu", zone, block_number);
+    void *meta = *((void **)((char *)ptr - sizeof(void *)));
+    if (META_IS_ZONE(meta)) {
+        zone_t *zone = META_ZONE(meta);
+        int block_number = META_BLOCK_NUM(meta);
+        DBG("free freeing block in zone %p block_number=%d", zone, block_number);
         zone->bitmap[block_number / 8] |= (1 << (block_number % 8));
         zone->free_count++;
-        DBG("free updated bitmap byte[%zu]=0x%02x free_count=%d",
+        DBG("free updated bitmap byte[%d]=0x%02x free_count=%d",
             block_number / 8, zone->bitmap[block_number / 8], zone->free_count);
-        if(zone->free_count == BLOCKS_PER_ZONE){
+        if (zone->free_count == zone->number_of_blocks) {
             DBG("free zone %p fully empty, reclaiming", zone);
             zone_t **free_list = (zone->type == TINY_BLOCK)
                 ? &global_heap.free_tiny_zones
                 : &global_heap.free_small_zones;
-            if(zone->prev != NULL || zone->next != NULL){
+            if (zone->prev != NULL || zone->next != NULL) {
                 lst_detach(free_list, zone);
-                munmap(zone->base, sizeof(zone_t) + (zone->block_size + sizeof(void *)) * BLOCKS_PER_ZONE);
-                
+                munmap(zone->base, zone->zone_size);
                 return;
             }
-        } else if(zone->free_count == 1){
+        } else if (zone->free_count == 1) {
             DBG("free moving zone %p back to free list", zone);
-            if(zone->type == TINY_BLOCK){
+            if (zone->type == TINY_BLOCK) {
                 lst_detach(&global_heap.full_tiny_zones, zone);
                 lst_add_back(&global_heap.free_tiny_zones, zone);
-            }
-            else if(zone->type == SMALL_BLOCK){
+            } else if (zone->type == SMALL_BLOCK) {
                 lst_detach(&global_heap.full_small_zones, zone);
-                
                 lst_add_back(&global_heap.free_small_zones, zone);
             }
         }
-     } 
-     else {
-        block_t *block = (block_t *)meta_ptr;
+    } else {
+        block_t *block = (block_t *)meta;
         block_detach(&global_heap.full_large_blocks, block);
         if (block->size > SMALL_BLOCK_SIZE * BLOCKS_PER_ZONE) {
             munmap(block, sizeof(block_t) + sizeof(void *) + block->size);
-            
             return;
         }
         block->free = 1;
@@ -262,23 +280,19 @@ void *realloc(void *ptr, size_t size){
     }
     
     DBG("realloc called with ptr=%p size=%zu", ptr, size);
-    void *meta_ptr = *((void **)((char *)ptr - sizeof(void *)));
-    type_t type = ((block_t *)meta_ptr)->type;
+    void *meta = *((void **)((char *)ptr - sizeof(void *)));
     size_t current_size;
-    if(type == TINY_BLOCK || type == SMALL_BLOCK){
-        zone_t *zone = (zone_t *)meta_ptr;
-        current_size = zone->block_size;
-        if(size <= current_size){
+    if (META_IS_ZONE(meta)) {
+        current_size = ZONE_BLOCK_SIZE(META_ZONE(meta));
+        if (size <= current_size) {
             DBG("realloc size %zu fits in zone block_size %zu, returning same pointer", size, current_size);
-            
             return ptr;
         }
     } else {
-        block_t *block = (block_t *)meta_ptr;
+        block_t *block = (block_t *)meta;
         current_size = block->size;
-        if(size <= current_size){
+        if (size <= current_size) {
             DBG("realloc size %zu fits in large block size %zu, returning same pointer", size, current_size);
-            
             return ptr;
         }
     }
